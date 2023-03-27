@@ -8,12 +8,18 @@ namespace Leetcode.Easy
 {
     internal static class IsPalindrome
     {
-        public static bool isPalindrome(int x)
+        public static bool isPalindrome(int value)
         {
+            int  Mod, sum = 0, temp;
+            temp = value;
+            while (value > 0)
+            {
+                Mod = value % 10;
+                sum = (sum * 10) + Mod;
+                value = value / 10;
+            }
+            return (temp == sum)?  true: false;
 
-
-
-            return true;
         }
     }
 }
