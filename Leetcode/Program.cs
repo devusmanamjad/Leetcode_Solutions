@@ -1,4 +1,6 @@
-﻿using Leetcode.Easy;
+﻿using Leetcode;
+using Leetcode.Easy;
+using System.Drawing;
 
 namespace DataLoader
 {
@@ -6,6 +8,7 @@ namespace DataLoader
     {
         public static void Main(string[] pcsid)
         {
+            UserInput userInput = new UserInput();
             int[] NumberArr = new int[] { 1, 5, 8, 10 , 20 , 60 , 68 };
             EasyLeetSolution.printEasyLeetList();
             Console.Write("Please Select the Problem Number:    ");
@@ -13,7 +16,14 @@ namespace DataLoader
 
             switch (prblm) {
                 case "1":
-                    EasyLeetSolution.twoSum(NumberArr, 108);
+                    int[] array = userInput.ReadArrayFromInput();
+
+                    Console.Write("Enter an integer as string: ");
+                    string getString = Console.ReadLine();
+
+                    int userInt = userInput.CastStringToInt(getString);
+
+                    EasyLeetSolution.twoSum(array, userInt);
                     break;
 
                 case "2":

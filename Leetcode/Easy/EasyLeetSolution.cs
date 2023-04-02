@@ -25,9 +25,9 @@ namespace Leetcode.Easy
         {
             List<int> result = new List<int>();
 
-            for (int i = 0; i <= nums.Length; i++)
+            for (int i = 0; i <= nums.Length-1; i++)
             {
-                for (int j = i + 1; j <= nums.Length; j++)
+                for (int j = i + 1; j <= nums.Length-1; j++)
                 {
                     if (nums[i] + nums[j] == target)
                     {
@@ -36,7 +36,11 @@ namespace Leetcode.Easy
                     };
                 }
             }
-            Console.WriteLine("[" + string.Join(", ", result) + "]");
+            Console.WriteLine("");
+            Console.Write("Result to get the target value: "+ target + ",is by adding the values of indexes: [" + string.Join(", ", result) + "]");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
         }
         #endregion
         #region 2. Palindrome Number.
