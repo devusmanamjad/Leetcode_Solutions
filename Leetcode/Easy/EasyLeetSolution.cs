@@ -16,7 +16,7 @@ namespace Leetcode.Easy
             Console.WriteLine(" Please select the problem from the following you want to solve:");
             Console.WriteLine("     1. Two Sum.");
             Console.WriteLine("     2. Palindrome Number.");
-            Console.WriteLine("     3. Longest Common Prefix.");
+            Console.WriteLine("     3. Binary Search.");
 
         }
         #endregion
@@ -54,7 +54,31 @@ namespace Leetcode.Easy
 
         }
         #endregion
+        #region 3. Binary Search
+        public static int BinarySearch(int[] nums, int target) {
+            int start = 0;
+            int end = nums.Length - 1;
+            while (start <= end)
+            {
+                int mid = start + (end - start) / 2;
 
+                if (target == nums[mid])
+                {
+                    return mid;
+                }
+                else if (target < nums[mid])
+                {
+                    end = mid - 1;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
+            }
+            return -1;
+        }
+
+        #endregion
 
     }
 }
