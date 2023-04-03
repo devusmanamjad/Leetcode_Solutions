@@ -10,6 +10,7 @@ namespace DataLoader
         {
             UserInput userInput = new UserInput();
             int[] NumberArr = new int[] { 1, 5, 8, 10 , 20 , 60 , 68 };
+            int result;
             EasyLeetSolution.printEasyLeetList();
             Console.Write("Please Select the Problem Number:    ");
             string prblm =  Console.ReadLine();
@@ -31,10 +32,14 @@ namespace DataLoader
                     break;
 
                 case "3":
-                    int result = EasyLeetSolution.BinarySearch(NumberArr, 68);
+                     result = EasyLeetSolution.BinarySearch(NumberArr, 68);
                     Console.WriteLine(result);
                     break;
-
+                
+                case "4":
+                     result = EasyLeetSolution.SearchInsertPosition(NumberArr, 68);
+                    Console.WriteLine(result);
+                    break;
 
             }
 

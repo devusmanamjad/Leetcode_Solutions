@@ -17,6 +17,8 @@ namespace Leetcode.Easy
             Console.WriteLine("     1. Two Sum.");
             Console.WriteLine("     2. Palindrome Number.");
             Console.WriteLine("     3. Binary Search.");
+            Console.WriteLine("     4. Search Inser tPosition.");
+
 
         }
         #endregion
@@ -80,6 +82,32 @@ namespace Leetcode.Easy
                 }
             }
             return -1;
+        }
+
+        #endregion
+        #region 4. Search Inser tPosition
+        public static int SearchInsertPosition(int[] nums, int target)
+        {
+            int start = 0;
+            int end = nums.Length - 1;
+            while (start <= end)
+            {
+                int mid = start + (end - start) / 2;
+
+                if (target == nums[mid])
+                {
+                    return mid;
+                }
+                else if (target < nums[mid])
+                {
+                    end = mid - 1;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
+            }
+            return start;
         }
 
         #endregion
