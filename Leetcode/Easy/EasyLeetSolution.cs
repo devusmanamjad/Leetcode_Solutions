@@ -120,10 +120,15 @@ namespace Leetcode.Easy
         #region 5. Squares of a Sorted Array
         public  static int[] SquaresOfSortedArray(int[] nums)
         {
+            Array.Sort(nums);
             int[] resultArray = new int[nums.Length];
-            for (int i = 0 ; i <= nums.Length -1 ; i++) {
+            for (int i = 0; i <= nums.Length - 1; i++)
+            {
                 resultArray[i] = nums[i] * nums[i];
             }
+            //  if (resultArray.Length > 0 ){
+            Array.Sort(resultArray);
+            //  }
             return resultArray;
         }
 
