@@ -11,6 +11,7 @@ namespace DataLoader
             UserInput userInput = new UserInput();
             int[] NumberArr = new int[] { 1, 5, 8, 10 , 20 , 60 , 68 };
             int result;
+            List<int> ResArray = new List<int>();
             EasyLeetSolution.printEasyLeetList();
             Console.Write("Please Select the Problem Number:    ");
             string prblm =  Console.ReadLine();
@@ -41,6 +42,10 @@ namespace DataLoader
                     Console.WriteLine(result);
                     break;
 
+                case "5": // Squares of a Sorted Array
+                    ResArray.AddRange((EasyLeetSolution.SquaresOfSortedArray(NumberArr)));
+                    Console.WriteLine("[" + string.Join(", ", ResArray) + "]");
+                    break;
             }
 
         }

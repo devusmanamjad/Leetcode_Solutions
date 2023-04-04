@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Leet Code\\Leetcode\\Leetcode\\Leetcode.csproj",
+      "projectUniqueName": "D:\\Practice\\Leetcode_Solutions\\Leetcode\\Leetcode.csproj",
       "projectName": "Leetcode",
-      "projectPath": "D:\\Leet Code\\Leetcode\\Leetcode\\Leetcode.csproj",
+      "projectPath": "D:\\Practice\\Leetcode_Solutions\\Leetcode\\Leetcode.csproj",
       "packagesPath": "C:\\Users\\usman.amjad\\.nuget\\packages\\",
-      "outputPath": "D:\\Leet Code\\Leetcode\\Leetcode\\obj\\",
+      "outputPath": "D:\\Practice\\Leetcode_Solutions\\Leetcode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\usman.amjad\\AppData\\Roaming\\NuGet\\NuGet.Config",

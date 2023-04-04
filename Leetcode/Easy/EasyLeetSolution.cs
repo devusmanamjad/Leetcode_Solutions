@@ -17,7 +17,9 @@ namespace Leetcode.Easy
             Console.WriteLine("     1. Two Sum.");
             Console.WriteLine("     2. Palindrome Number.");
             Console.WriteLine("     3. Binary Search.");
-            Console.WriteLine("     4. Search Inser tPosition.");
+            Console.WriteLine("     4. Search Insert Position.");
+            Console.WriteLine("     5. Squares of a Sorted Array.");
+
 
 
         }
@@ -45,6 +47,7 @@ namespace Leetcode.Easy
 
         }
         #endregion
+
         #region 2. Palindrome Number.
         public static bool isPalindrome(int value)
         {
@@ -60,6 +63,7 @@ namespace Leetcode.Easy
 
         }
         #endregion
+
         #region 3. Binary Search
         public static int BinarySearch(int[] nums, int target) {
             int start = 0;
@@ -85,7 +89,8 @@ namespace Leetcode.Easy
         }
 
         #endregion
-        #region 4. Search Inser tPosition
+
+        #region 4. Search Insert Position
         public static int SearchInsertPosition(int[] nums, int target)
         {
             int start = 0;
@@ -111,6 +116,20 @@ namespace Leetcode.Easy
         }
 
         #endregion
+
+        #region 5. Squares of a Sorted Array
+        public  static int[] SquaresOfSortedArray(int[] nums)
+        {
+            int[] resultArray = new int[nums.Length];
+            for (int i = 0 ; i <= nums.Length -1 ; i++) {
+                resultArray[i] = nums[i] * nums[i];
+            }
+            return resultArray;
+        }
+
+        #endregion
+
+
 
     }
 }
