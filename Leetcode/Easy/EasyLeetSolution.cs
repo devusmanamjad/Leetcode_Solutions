@@ -19,6 +19,8 @@ namespace Leetcode.Easy
             Console.WriteLine("     3. Binary Search.");
             Console.WriteLine("     4. Search Insert Position.");
             Console.WriteLine("     5. Squares of a Sorted Array.");
+            Console.WriteLine("     6. Rotate Array.");
+
 
 
 
@@ -134,6 +136,35 @@ namespace Leetcode.Easy
 
         #endregion
 
+
+        #region 6. Rotate Array.
+        public static void RotateArray(int[] nums, int rotateNumber)
+        {
+            List<int> skimed = new List<int>();
+            List<int> Result = new List<int>();
+
+            int[] resultArray = new int[nums.Length];
+            for (int i = nums.Length-1; i >= nums.Length - rotateNumber; i--) {
+                skimed.Add(nums[i]);
+            
+            }
+            for (int i = skimed.Count()-1; i <= 0; i--)
+            {
+                Result.Add(nums[i]);
+
+            }
+            for (int i = 0; i <= nums.Length - (rotateNumber+1); i++)
+            {
+                Result.Add(nums[i]);
+
+            }
+            Result.AddRange(skimed.ToArray());
+            Console.WriteLine("[" + string.Join(", ", Result) + "]");
+         
+            //return skimed.ToArray();
+        }
+
+        #endregion
 
 
     }
