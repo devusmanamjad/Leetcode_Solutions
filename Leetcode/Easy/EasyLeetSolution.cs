@@ -152,26 +152,19 @@ namespace Leetcode.Easy
             Console.WriteLine("[" + string.Join(", ", rotated) + "]");
             //List<int> skimed = new List<int>();
             //List<int> Result = new List<int>();
-
             //int[] resultArray = new int[nums.Length];
             //for (int i = nums.Length-1; i >= nums.Length - (k); i--) {
             //    skimed.Add(nums[i]);
             //}
-
-
             //for (int i = skimed.Count()-1; i >= 0; i--)
             //{
             //    Result.Add(skimed[i]);
-
             //}
             //for (int i = 0; i <= nums.Length - (k+1); i++)
             //{
             //    Result.Add(nums[i]);
-
             //}
-
             //Console.WriteLine("[" + string.Join(", ", Result) + "]");
-
             //return skimed.ToArray();
         }
 
