@@ -138,29 +138,40 @@ namespace Leetcode.Easy
 
 
         #region 6. Rotate Array.
-        public static void RotateArray(int[] nums, int rotateNumber)
+        public static void RotateArray(int[] nums, int k)
         {
-            List<int> skimed = new List<int>();
-            List<int> Result = new List<int>();
 
-            int[] resultArray = new int[nums.Length];
-            for (int i = nums.Length-1; i >= nums.Length - rotateNumber; i--) {
-                skimed.Add(nums[i]);
-            
-            }
-            for (int i = skimed.Count()-1; i <= 0; i--)
-            {
-                Result.Add(nums[i]);
+            int len = nums.Length;
+            int _k = k;
+            if (_k > len)
+                _k = _k % len;
+            int[] rotated = new int[len];
+            Array.Copy(nums, len - _k, rotated, 0, _k);
+            Array.Copy(nums, 0, rotated, _k, len - _k);
+            Array.Copy(rotated, nums, len);
+            Console.WriteLine("[" + string.Join(", ", rotated) + "]");
+            //List<int> skimed = new List<int>();
+            //List<int> Result = new List<int>();
 
-            }
-            for (int i = 0; i <= nums.Length - (rotateNumber+1); i++)
-            {
-                Result.Add(nums[i]);
+            //int[] resultArray = new int[nums.Length];
+            //for (int i = nums.Length-1; i >= nums.Length - (k); i--) {
+            //    skimed.Add(nums[i]);
+            //}
 
-            }
-            Result.AddRange(skimed.ToArray());
-            Console.WriteLine("[" + string.Join(", ", Result) + "]");
-         
+
+            //for (int i = skimed.Count()-1; i >= 0; i--)
+            //{
+            //    Result.Add(skimed[i]);
+
+            //}
+            //for (int i = 0; i <= nums.Length - (k+1); i++)
+            //{
+            //    Result.Add(nums[i]);
+
+            //}
+
+            //Console.WriteLine("[" + string.Join(", ", Result) + "]");
+
             //return skimed.ToArray();
         }
 

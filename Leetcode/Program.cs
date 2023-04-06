@@ -50,14 +50,10 @@ namespace DataLoader
                 case "6": // 6. Rotate Array.
 
                     int[] ArrToRotate = userInput.ReadArrayFromInput();
-
                     Console.Write("Enter an integer as string: ");
                     string inp = Console.ReadLine();
-
                     int RotateNumber = userInput.CastStringToInt(inp);
                     EasyLeetSolution.RotateArray(ArrToRotate, RotateNumber);
-                    //ResArray.AddRange((EasyLeetSolution.RotateArray(ArrToRotate, RotateNumber)));
-                    Console.WriteLine("[" + string.Join(", ", ResArray) + "]");
                     break;
 
 
